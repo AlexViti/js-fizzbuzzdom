@@ -1,6 +1,6 @@
 :root {
 	--gap: 1rem;
-	--column-number: 10;
+	--column-number: 9;
 }
 
 * {
@@ -26,6 +26,9 @@ body {
 .box {
 	width: calc(100% / var(--column-number) - var(--gap));
 	background-color: aqua;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .box::after {
@@ -44,7 +47,8 @@ body {
 	color: white;
 }
 
-.fizz.buzz {
+.fizz.buzz,
+.fizz-buzz {
 	background-color: black;
 	color: white;
 }
