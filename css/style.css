@@ -1,5 +1,50 @@
+:root {
+	--gap: 1rem;
+	--column-number: 10;
+}
+
 * {
 	border: 0;
 	margin: 0;
 	box-sizing: border-box;
+}
+
+body {
+	text-align: center;
+}
+
+.boxes-container {
+	max-width: 1200px;
+	margin: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--gap);
+}
+
+.box {
+	width: calc(100% / var(--column-number) - var(--gap));
+	background-color: aqua;
+}
+
+.box::after {
+	content: '';
+	padding-bottom: 100%;
+	display: block;
+}
+
+.fizz {
+	background-color: blue;
+	color: white;
+}
+
+.buzz {
+	background-color: red;
+	color: white;
+}
+
+.fizz.buzz {
+	background-color: black;
+	color: white;
 }
