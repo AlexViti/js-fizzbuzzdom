@@ -1,15 +1,29 @@
 :root {
-	--column-number: 9;
-
-	--container-width: 1200px;
-	--gap: 1rem;
-	--font-size: 20px;
-
 	--bg-body: #083b4c;
 	--bg-box: #1389b2;
 	--bg-fizz: #0bd6a1;
 	--bg-buzz: #ffd166;
 	--bg-fizzbuzz: #f0466f;
+
+	--column-number: 9;
+
+	--font-size: 20px;
+	--container-width: 1200px;
+	--gap: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+	:root {
+		--column-number: 6;
+		--container-width: 750px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	:root {
+		--column-number: 3;
+		--font-size: 18px;
+	}
 }
 
 * {
@@ -26,11 +40,12 @@ html {
 body {
 	text-align: center;
 	background-color: var(--bg-body);
+	padding: 0 1rem;
 }
 
 h1 {
 	color: white;
-	margin: 2rem;
+	margin: 2rem 0;
 	font-size: 3rem;
 }
 
