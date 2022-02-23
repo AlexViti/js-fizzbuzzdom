@@ -1,6 +1,15 @@
 :root {
-	--gap: 1rem;
 	--column-number: 9;
+
+	--container-width: 1200px;
+	--gap: 1rem;
+	--font-size: 20px;
+
+	--bg-body: #083b4c;
+	--bg-box: #1389b2;
+	--bg-fizz: #0bd6a1;
+	--bg-buzz: #ffd166;
+	--bg-fizzbuzz: #f0466f;
 }
 
 * {
@@ -9,12 +18,24 @@
 	box-sizing: border-box;
 }
 
+html {
+	font-family: sans-serif;
+	font-size: var(--font-size);
+}
+
 body {
 	text-align: center;
+	background-color: var(--bg-body);
+}
+
+h1 {
+	color: white;
+	margin: 2rem;
+	font-size: 3rem;
 }
 
 .boxes-container {
-	max-width: 1200px;
+	max-width: var(--container-width);
 	margin: auto;
 
 	display: flex;
@@ -25,7 +46,7 @@ body {
 
 .box {
 	width: calc(100% / var(--column-number) - var(--gap));
-	background-color: aqua;
+	background-color: var(--bg-box);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -38,17 +59,13 @@ body {
 }
 
 .fizz {
-	background-color: blue;
-	color: white;
+	background-color: var(--bg-fizz);
 }
 
 .buzz {
-	background-color: red;
-	color: white;
+	background-color: var(--bg-buzz);
 }
 
-.fizz.buzz,
-.fizz-buzz {
-	background-color: black;
-	color: white;
+.fizz.buzz {
+	background-color: var(--bg-fizzbuzz);
 }
