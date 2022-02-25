@@ -3,10 +3,9 @@ const boxesContainer = document.querySelector('.boxes-container');
 for (let i = 1; i <= 100; i++) {
 
 	boxesContainer.innerHTML += `<div class="box">${i}</div>`;
-	let box = boxesContainer.querySelector('.box:last-child');
+	let box = boxesContainer.lastElementChild;
 
 	if (i % 15 == 0) {
-
 	  box.classList.add('fizz', 'buzz');
 	  box.innerHTML = `fizzbuzz`;
 
@@ -18,4 +17,4 @@ for (let i = 1; i <= 100; i++) {
 		box.classList.add('fizz');
 		box.innerHTML = `fizz`;
 	}
-  }
+}
